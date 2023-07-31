@@ -1,0 +1,340 @@
+/* Importation de police personnalisé */
+@font-face {
+  /* On nome la police pour la réutiliser plus tard */
+  font-family: bold;
+  /* Lien du fichier de la police */
+  src: url('./font/CooperHewitt-Bold.otf');
+}
+
+@font-face {
+  font-family: semibold;
+  src: url('./font/CooperHewitt-Semibold.otf');
+}
+/* Sélecteur universel */
+* {
+  /* On règle margin et padding pour ne pas avoir d'espace */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  /* Effet de scrool avec une animation quand on clique sur la nav bar */
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Définition de la couleur de fond en blanc */
+  background-color: rgb(255, 255, 255);
+  padding: 0%;
+  margin: 0%;
+}
+
+/* Création et décoration de la nav bar */
+ul {
+  /* On ne met pas de bouton a la liste */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* On cache le texte si il dépasse */
+  overflow: hidden;
+  /* Couleur de fond noir */
+  background-color: #000000;
+  /* Utilisation de notre police personnalisé */
+  font-family: bold;
+}
+
+/* Création d'une barre entre les boutons pour les séparer */
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+/* Modification du texte (lien) pour avoir un lien plus beau */
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Changement de couleur quand on passe la souris sur un bouton SAUF 
+sur celui .actif qui reste ne permance rouge (Acceuil) */
+li a:hover:not(.actif) {
+  background-color: #da2f2f;
+}
+
+/* Définition d'une classe pour avoir un bouton toujours rouge */
+.actif {
+  background-color: #ba2d2d;
+}
+
+/* Création d'un texte personnalisé pour les fonds blanc */
+.texte {
+  color: #000000;
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  margin-top: 4%;
+  font-family: 'bold'
+}
+
+/* Création d'un texte personnalisé mais pour fond noir (avec les mêmes attribut que "texte") */
+.texte2 {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  padding-top: 5%;
+  margin-bottom: 60px;
+  margin-top: 4%;
+  font-family: 'bold'
+}
+
+/* Modification de l'image sur l'acceuil pour lui donner un meilleur style */
+.img-profile {
+  /* Changement de la taille de l'image et ajout de modifcation pour que l'image soit bien intégré */
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-left: 10%;
+  margin-bottom: 4%;
+  /* Ajout d'un effet d'ombre a l'image pour plus d'intégration*/
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 20px;
+}
+
+/* Ajout de la balise flex pour bouger le texte */
+.aligntexte {
+  display: flex;
+}
+
+/* Ajout de la balise flex pour bouger les boites */
+.align-box {
+  display: flex;
+}
+
+/* Modification de la balise H2 en lui appliquant la police personnalisé de sa taille et couleur */
+h2 {
+  font-family: 'semibold';
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+/* Modification de la balise P en lui appliquant la police personnalisé de sa taille et couleur */
+p {
+  color: #ffffff;
+  font-size: larger;
+  font-family: 'semibold';
+}
+
+/* Création d'une balise "noir" pour mettre le texte en noir dans html */
+.noir {
+  color: rgb(0, 0, 0);
+}
+/* Création d'une balise "rouge" pour mettre le texte en rouge dans html */
+.rouge {
+  color: #da2f2f;
+}
+
+/* Balise pour centrer le texte */
+.centertexte {
+  text-align: center;
+}
+
+/* Création d'une boite qui acceuillera le texte sur l'acceuil */
+.actextebox {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-left: 90px;
+  margin-right: 3%;
+  margin-bottom: 90px;
+  width: 100%;
+  flex: 1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Création de la section stage */
+.stage {
+  height: fit-content;
+  color: white;
+  /* Utilisation de "clip-path" pour avoir des formes personnalisées */
+  clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+  background-color: #000000;
+}
+
+/* Création d'une boite pour mes stage */
+.box {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 90px;
+  width: 40%;
+  flex: 0.5;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 3px;
+}
+
+/* Meme boite que au dessus, juste placé différement dans html */
+.box2 {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  padding: 20px;
+  margin-right: 2%;
+  margin-bottom: 90px;
+  width: 40%;
+  flex: 0.5;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 3px;
+}
+
+/* Création d'un bouton pour les stage */
+.bouton1 {
+  border-radius: 5px;
+  /* Couleur de la bordure */
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  /* Alignement du et dans le bouton */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* police dans le bouton */
+  font-family: 'semibold';
+  border-radius: 4px;
+  /* Transition de couleur quand on passe le curseur sur le bouton */
+  transition: 0.3s;
+}
+
+/* Animation quand on passe la souris sur le bouton */
+.bouton1:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition: 0.5s;
+}
+
+/* Création d'un deuxieme bouton mais pour fond blanc */
+.bouton2 {
+  border-radius: 5px;
+  border: 2px solid #000000;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  color: #000000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'semibold';
+  border-radius: 4px;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+}
+
+/* Animation quand on passe la souris*/
+.bouton2:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+/* Création d'une ligne entre les compétences et les projets*/
+.texteprcoalign {
+  padding: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 40%;
+  flex: 0.5;
+  border-left: 6px solid rgb(0, 0, 0);
+  height: 1300px;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+/* Création d'une ligne avant compétence pour bien aligner au milieu MAIS la ligne seul sur le coté est moche
+on la met donc de la meme couleur que le fond (blanc) pour la rendre invisible et garder le bon alignement */
+.texteprcoalignsaligne {
+  padding: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 40%;
+  flex: 0.5;
+  border-left: 6px solid rgb(255, 255, 255);
+  margin-right: -3px;
+}
+
+/* Création d'une boite texte pour les projets (projets-texte-box) */
+.prtextebox {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  width: 95%;
+  flex: 0.5;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Création d'une boite texte pour les compéteces (compétences-texte-box) */
+.cotextebox {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  width: 95%;
+  flex: 0.5;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Création d'un modificateur de la section contact */
+.contact {
+  height: fit-content;
+  color: rgb(255, 255, 255);
+  /* Clip-path pour forme personnalisée */
+  clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+  background-color: #000000;
+}
+
+/* Modification des images pour les rendres ronde */
+.rond {
+  border-radius: 50%;
+  /* margin pour les aligners */
+  margin-left: 14%;
+}
+
+/* Texte aligné avec le logo de discord */
+.aligntextediscord {
+  margin-left: 165px;
+  padding-top: 2%;
+  margin-bottom: 40px;
+}
+
+/* alignement des 3 autres texte avec les 3 autres logos (celui de discord na pas le même écart */
+.aligntexte3 {
+  margin-left: 140px;
+  padding-top: 2%;
+  margin-bottom: 40px;
+}
+
+/* Changement de fond du footer */
+.footer {
+  background-color: white;
+  margin: 10px;
+}
